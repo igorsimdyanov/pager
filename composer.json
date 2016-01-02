@@ -15,7 +15,7 @@
         }
     ],
     "support": {
-        "igorsimdyanov@gmail.com"
+        "email  ": "igorsimdyanov@gmail.com"
     },
     "require": {
         "php": ">=7.0.0"
