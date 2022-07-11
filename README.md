@@ -8,49 +8,49 @@ A library to split results into multiple pages
 
 Via Composer
 
-``` bash
+```bash
 $ composer require igorsimdyanov/pager
 ```
 
 ## Usage
 
-``` php
+```php
 $obj = new ISPager\DirPager(
-  new ISPager\PagesList(),
-  'photos',
-  3,
-  2);
-echo "<pre>";
+    new ISPager\PagesList(),
+    'photos',
+    3,
+    2
+);
+echo '<pre>';
 print_r($obj->getItems());
-echo "</pre>";
+echo '</pre>';
 echo "<p>$obj</p>";
 ```
 
-``` php
+```php
 $obj = new ISPager\FilePager(
-  new ISPager\ItemsRange(),
-  'largetextfile.txt');
-echo "<pre>";
+    new ISPager\ItemsRange(),
+    'largetextfile.txt');
+echo '<pre>';
 print_r($obj->getItems());
-echo "</pre>";
+echo '</pre>';
 echo "<p>$obj</p>";
 ```
 
-``` php
+```php
 try {
-  $pdo = new PDO(
-    'mysql:host=localhost;dbname=test',
-    'root',
-    '',
-    [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-  $obj = new ISPager\PdoPager(
-    new ISPager\ItemsRange(),
-    $pdo,
-    'table_name');
-  echo "<pre>";
-  print_r($obj->getItems());
-  echo "</pre>";
-  echo "<p>$obj</p>";
+    $pdo = new PDO(
+        'pgsql:host=localhost;dbname=test',
+        'root'
+    );
+    $obj = new ISPager\PdoPager(
+        new ISPager\ItemsRange(),
+        $pdo,
+        'table_name');
+    echo '<pre>';
+    print_r($obj->getItems());
+    echo '</pre>';
+    echo "<p>$obj</p>";
 }
 catch (PDOException $e) {
   echo "Can't connect to database";
@@ -59,4 +59,5 @@ catch (PDOException $e) {
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/dnoegel/php-xdg-base-dir/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/dnoegel/
+php-xdg-base-dir/blob/master/LICENSE) for more information.
