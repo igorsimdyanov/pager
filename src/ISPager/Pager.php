@@ -144,13 +144,13 @@ abstract class Pager
      */
     public function getPagesCount()
     {
-      // Количество позиций
-      $total = $this->getItemsCount();
-      // Вычисляем количество страниц
-      $result = (int)($total / $this->getItemsPerPage());
-      if((float)($total / $this->getItemsPerPage()) - $result != 0) $result++;
+          // Количество позиций
+          $total = $this->getItemsCount();
+          // Вычисляем количество страниц
+          $result = (int)($total / $this->getItemsPerPage());
+          if((float)($total / $this->getItemsPerPage()) - $result != 0) $result++;
 
-      return $result;
+          return $result;
     }
     /**
      * Возвращает строку с постраничной навигацией

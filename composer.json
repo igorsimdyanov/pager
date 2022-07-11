@@ -15,14 +15,14 @@
         }
     ],
     "support": {
-        "email  ": "igorsimdyanov@gmail.com"
+        "email": "igorsimdyanov@gmail.com"
     },
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=8.0.0"
     },
     "autoload": {
         "psr-4": {
-            "ISPager\\": "src/ISPager"
+            "ISPager\\": "src/"
         }
     }
 }
